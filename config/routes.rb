@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   match '/imprint', to: 'static_pages#imprint', via: 'get'
   match '/acquisition', to: 'static_pages#acquisition', via: 'get'
 
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
