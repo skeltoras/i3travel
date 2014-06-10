@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/dashboard'
+
   resources :renting_details
 
   resources :customers
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/imprint', to: 'static_pages#imprint', via: 'get'
   match '/acquisition', to: 'static_pages#acquisition', via: 'get'
+  match '/admin', to: 'admin#dashboard', via: 'get'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
