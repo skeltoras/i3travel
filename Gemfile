@@ -37,6 +37,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use of own gems
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'alchemy_cms', github: 'magiclabs/alchemy_cms', branch: 'master'
+#gem 'alchemy-devise'
+gem 'alchemy-devise', github: 'magiclabs/alchemy-devise', branch: 'master'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
