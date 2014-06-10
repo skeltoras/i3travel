@@ -47,6 +47,8 @@ gem 'haml'
 gem 'devise'
 #https://github.com/CanCanCommunity/cancancan
 gem 'cancancan', '~> 1.8'
+#https://github.com/plataformatec/simple_form
+gem 'simple_form'
 
 # Use for development
 group :development do
