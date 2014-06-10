@@ -37,6 +37,29 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use of own gems
 gem 'bootstrap-sass', '~> 3.1.1'
+#https://github.com/thoughtbot/paperclip
+gem "paperclip", "~> 4.1"
+#https://github.com/mislav/will_paginate
+gem 'will_paginate', '~> 3.0'
+#https://github.com/haml/haml
+gem 'haml'
+#https://github.com/plataformatec/devise
+gem 'devise'
+#https://github.com/CanCanCommunity/cancancan
+gem 'cancancan', '~> 1.8'
+
+# Use for development
+group :development do
+  #https://github.com/charliesome/better_errors
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  #https://github.com/sj26/mailcatcher
+  #gem 'mailcatcher'
+  #https://github.com/MiniProfiler/rack-mini-profiler
+  gem 'rack-mini-profiler'
+  #https://github.com/ryanb/letter_opener
+  gem 'letter_opener'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
