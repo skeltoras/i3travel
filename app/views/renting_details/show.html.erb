@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shortdescription:</strong>
+  <%= @renting_detail.shortdescription %>
+</p>
+
+<p>
+  <strong>Longdescription:</strong>
+  <%= @renting_detail.longdescription %>
+</p>
+
+<%= link_to 'Edit', edit_renting_detail_path(@renting_detail) %> |
+<%= link_to 'Back', renting_details_path %>

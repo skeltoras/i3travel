@@ -4,6 +4,8 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path %></li>
+        <li><a href="#">Reisen</a></li>
+        <li><%= link_to "Vermietungen", rentings_path %></li>
         <li><%= link_to "Akquise", acquisition_path %></li>
         <li><%= link_to "Kontakt", contact_path %></li>
         <li><%= link_to "Impressum", imprint_path %></li>   
@@ -11,7 +13,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Konto <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="#">Profil</a></li>
-            <li><a href="#">Einstellungen</a></li>
+            <li><li><%= link_to "Einstellungen", customers_path %></li></li>
             <li><a href="#">Ausloggen</a></li>
           </ul>
         </li>

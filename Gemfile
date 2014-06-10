@@ -41,6 +41,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem "paperclip", "~> 4.1"
 #https://github.com/mislav/will_paginate
 gem 'will_paginate', '~> 3.0'
+gem 'bootstrap-will_paginate'
 #https://github.com/haml/haml
 gem 'haml'
 #https://github.com/plataformatec/devise
@@ -61,6 +62,8 @@ group :development do
   gem 'rack-mini-profiler'
   #https://github.com/ryanb/letter_opener
   gem 'letter_opener'
+  #https://github.com/stympy/faker
+  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

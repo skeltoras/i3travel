@@ -11,7 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610135434) do
+ActiveRecord::Schema.define(version: 20140610144911) do
+
+  create_table "customers", force: true do |t|
+    t.string   "customer_name",       default: "",    null: false
+    t.string   "customer_street",     default: "",    null: false
+    t.string   "customer_plz",        default: "",    null: false
+    t.string   "customer_city",       default: "",    null: false
+    t.string   "customer_state",      default: "",    null: false
+    t.string   "customer_telephone",  default: "",    null: false
+    t.string   "customer_contact"
+    t.string   "customer_telefax"
+    t.string   "customer_email"
+    t.string   "customer_homepage"
+    t.boolean  "customer_is_active",  default: true,  null: false
+    t.boolean  "customer_show_email", default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "renting_details", force: true do |t|
+    t.string   "shortdescription"
+    t.text     "longdescription"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rentings", force: true do |t|
+    t.string   "renting_object",        default: "", null: false
+    t.string   "renting_min_duration",  default: "", null: false
+    t.string   "renting_cost",          default: "", null: false
+    t.string   "renting_cost_duration", default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

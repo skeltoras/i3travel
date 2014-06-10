@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :renting_details
+
+  resources :customers
+
+  resources :rentings
+
   root 'static_pages#home'
   
   match '/contact', to: 'static_pages#contact', via: 'get'
