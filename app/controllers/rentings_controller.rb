@@ -1,10 +1,12 @@
 class RentingsController < ApplicationController
   before_action :set_renting, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /rentings
   # GET /rentings.json
   def index
-    @rentings = Renting.all
+    #@rentings = Renting.all
+    @rentings = Renting.paginate(page: params[:page])
   end
 
   # GET /rentings/1

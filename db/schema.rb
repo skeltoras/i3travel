@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610144911) do
+ActiveRecord::Schema.define(version: 20140610142506) do
 
   create_table "customers", force: true do |t|
     t.string   "customer_name",       default: "",    null: false
@@ -30,18 +30,25 @@ ActiveRecord::Schema.define(version: 20140610144911) do
     t.datetime "updated_at"
   end
 
-  create_table "renting_details", force: true do |t|
-    t.string   "shortdescription"
-    t.text     "longdescription"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "rentings", force: true do |t|
-    t.string   "renting_object",        default: "", null: false
-    t.string   "renting_min_duration",  default: "", null: false
-    t.string   "renting_cost",          default: "", null: false
-    t.string   "renting_cost_duration", default: "", null: false
+    t.string   "renting_object",           default: "",    null: false
+    t.string   "renting_min_duration",     default: "",    null: false
+    t.string   "renting_cost",             default: "",    null: false
+    t.string   "renting_cost_duration",    default: "",    null: false
+    t.string   "renting_location",         default: "",    null: false
+    t.string   "renting_region",           default: "",    null: false
+    t.string   "renting_state",            default: "",    null: false
+    t.string   "renting_display_offer",    default: "",    null: false
+    t.string   "renting_object_shortdesc", default: "",    null: false
+    t.text     "renting_object_longdesc",  default: "",    null: false
+    t.boolean  "renting_gallery",          default: false, null: false
+    t.boolean  "renting_header_picture",   default: false, null: false
+    t.boolean  "renting_header_slider",    default: false, null: false
+    t.boolean  "renting_video",            default: false, null: false
+    t.boolean  "renting_calendar",         default: false, null: false
+    t.boolean  "renting_form",             default: false, null: false
+    t.date     "renting_calendar_start"
+    t.date     "renting_calendar_end"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

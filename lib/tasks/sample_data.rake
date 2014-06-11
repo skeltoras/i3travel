@@ -2,12 +2,13 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
     make_customers
+    make_rentals
   end
 end
 
 def make_customers
-  #Faker::Config.locale = DE
-  80.times do |n|
+  Faker::Config.locale = 'de'
+  20.times do |n|
     c_name = Faker::Company.name
     c_contact = Faker::Name.name
     c_street = Faker::Address.street_address
@@ -29,4 +30,55 @@ def make_customers
       customer_homepage: c_web
     )
   end
+end
+
+def make_rentals
+  5.times do |n|
+    r_object = "Ferienhaus"
+    r_duration = Faker::Number.number(1)
+    r_cost = Faker::Number.number(3)
+    r_cdur = Faker::Number.digit
+    r_loc = Faker::Address.city
+    r_region = Faker::Address.state
+    r_state = Faker::Address.country
+    r_doffer = "saisonal"
+    r_shortdesc = Faker::Lorem.sentence
+    r_longdesc = Faker::Lorem.paragraph(2)
+    Renting.create!(
+      renting_object: r_object,
+      renting_min_duration: r_duration,
+      renting_cost: r_cost,
+      renting_cost_duration: r_cdur,
+      renting_location: r_loc,
+      renting_region: r_region,
+      renting_display_offer: r_doffer,
+      renting_object_shortdesc: r_shortdesc,
+      renting_object_longdesc: r_longdesc
+    )
+  end
+  
+  5.times do |n|
+    r_object = "Zimmer"
+    r_duration = Faker::Number.number(1)
+    r_cost = Faker::Number.number(3)
+    r_cdur = Faker::Number.digit
+    r_loc = Faker::Address.city
+    r_region = Faker::Address.state
+    r_state = Faker::Address.country
+    r_doffer = "saisonal"
+    r_shortdesc = Faker::Lorem.sentence
+    r_longdesc = Faker::Lorem.paragraph(2)
+    Renting.create!(
+      renting_object: r_object,
+      renting_min_duration: r_duration,
+      renting_cost: r_cost,
+      renting_cost_duration: r_cdur,
+      renting_location: r_loc,
+      renting_region: r_region,
+      renting_display_offer: r_doffer,
+      renting_object_shortdesc: r_shortdesc,
+      renting_object_longdesc: r_longdesc
+    )
+  end
+  
 end
